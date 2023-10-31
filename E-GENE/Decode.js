@@ -21,3 +21,4 @@ console.log(unescape("select 123 as &#039;test&#039;from dual;"));
 
 document.body.appendChild(encodearea);
 
+// fail..
