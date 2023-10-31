@@ -1,13 +1,10 @@
-let encodearea = document.createElement("textarea");
-encodearea.value = "select 123 as &#039;test&#039;from dual;";
-
-const regex = /&(amp|lt|gt|quot|#39);/g;
+const regex = /&(amp|lt|gt|quot|#039);/g;
 const chars = {
     '&amp;': '&',
     '&lt;': '<',
     '&gt;': '>',
     '&quot;': '"',
-    '&#39;': "'"
+    '&#039;': "'"
 }  
 
 function unescape(str) {
@@ -17,8 +14,6 @@ function unescape(str) {
 }
 
 console.log(typeof(encodearea.value));
-console.log(unescape("select 123 as &#039;test&#039;from dual;"));
+console.log(unescape(encodearea.value));
 
 document.body.appendChild(encodearea);
-
-// fail..
