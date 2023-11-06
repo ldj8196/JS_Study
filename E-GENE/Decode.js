@@ -12,7 +12,7 @@ const chars = {
 
 function unescape(str) {
     if(regex.test(str)) {
-        return str.replace(regex, (matched) => chars[matched] || matched);
+        return str.replace(regex, (matched) => '&'+chars[matched] || matched);
     } 
 }
 
